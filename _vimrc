@@ -30,12 +30,18 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+" Vundle
 Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-ref'
+" Vimshell
+Bundle 'Shougo/vimshell'
+" Run program with inputing \r
 Bundle 'thinca/vim-quickrun'
+" coffee script syntax highlight
 Bundle 'kchmck/vim-coffee-script'
+" scala syntax highlight
 Bundle 'derekwyatt/vim-scala'
 filetype plugin indent on
 
