@@ -19,6 +19,11 @@ syntax on
 " Current Line Highlight
 set cursorline
 
+" Status Line
+set laststatus=2
+set statusline=%<
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=[%l/%L,%c]%V%8P
+
 set nocompatible
 
 " Vundle Setting
