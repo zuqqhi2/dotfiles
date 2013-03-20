@@ -24,6 +24,7 @@ set laststatus=2
 set statusline=%<
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=[%l/%L,%c]%V%8P
 
+" compatible with vi
 set nocompatible
 
 " Vundle Setting
@@ -32,8 +33,12 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " Vundle
 Bundle 'gmarik/vundle'
+" Supplement
 Bundle 'Shougo/neocomplcache'
+let g:neocomplcache_enable_at_startup = 1
+
 Bundle 'Shougo/unite.vim'
+" Programming Language Reference
 Bundle 'thinca/vim-ref'
 " Vimshell
 Bundle 'Shougo/vimshell'
