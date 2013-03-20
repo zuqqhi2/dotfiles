@@ -26,5 +26,6 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
+Bundle 'kchmck/vim-coffee-script'
 filetype plugin indent on
 
