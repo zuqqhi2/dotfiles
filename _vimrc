@@ -127,5 +127,7 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'kchmck/vim-coffee-script'
 " scala syntax highlight
 Bundle 'derekwyatt/vim-scala'
+Bundle 'Shougo/vimproc'
+Bundle 'eagletmt/coqtop-vim'
 filetype plugin indent on
 
