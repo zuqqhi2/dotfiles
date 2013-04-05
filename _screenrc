@@ -1,0 +1,10 @@
+escape ^Zz
+
+hardstatus alwayslastline "[%Y-%m-%d(%D) %c:%s] %`%-w%{=b bw}%n %t%{-}%+w $STY"
+
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^]  command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
+
+
