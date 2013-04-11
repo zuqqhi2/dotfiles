@@ -1,6 +1,6 @@
 " plugin
-source $HOME/dotfiles/vim/neobundle
-source $HOME/dotfiles/vim/neocomplcache
+source $HOME/dotfiles/vimfiles/neobundle
+source $HOME/dotfiles/vimfiles/neocomplcache
 
 " vimrc
 set nocompatible
