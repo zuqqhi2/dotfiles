@@ -1,1 +1,1 @@
-    curl https://raw.github.com/kashimoo/dot/master/install.sh | sh
+    curl https://github.com/zuqqhi2/dotfiles/raw/master/install.sh | sh
