@@ -1,10 +1,58 @@
 escape ^Zz
+vbell off
+startup_message off
+shell -$SHELL
+defscrollback 21000
+autodetach on
+defencoding utf-8
+encoding utf-8 utf-8
+hardstatus off
+caption always "%{= .g}%Y/%m/%d(%D) %C:%s %A %{= .c}[%n %t] %?%h%:%t (screen #%n)%? %=%{= .c}(%l) "
+maxwin 8
 
-hardstatus alwayslastline "[%Y-%m-%d(%D) %c:%s] %`%-w%{=b bw}%n %t%{-}%+w $STY"
 
-bind r eval 'echo "Resize window"' 'command -c resize'
-bind -c resize ^]  command
-bind -c resize j eval 'resize +1' 'command -c resize'
-bind -c resize k eval 'resize -1' 'command -c resize'
-
-
+#####################
+#
+# %   the escape character itself
+# a   either am or pm
+# A   either AM or PM
+# c   current time HH:MM in 24h format
+# C   current time HH:MM in 12h format
+# d   day number
+# D   weekday name
+# h   hardstatus of the window
+# l   current load of the system
+# m   month number
+# M   month name
+# n   window number
+# s   seconds
+# t   window title
+# u   all other users on this window
+# w   all window numbers and names
+# W   all window numbers and names except the current one
+# y   last two digits of the year number
+# Y   full year number
+# ?   the part to the next %? is displayed only if an escape expands to an nonempty string
+# :   else part of %?
+# {   attribute/color modifier string terminated by the next }
+# +   add the specified set to the current attributes
+# -   remove the set from the current attributes
+# !   invert the set in the current attributes
+# =   change the current attributes to the specified set
+#
+# u   underline
+# b   bold
+# r   reverse
+# s   standout
+# B   blinking
+#
+# k   black
+# r   red
+# g   green
+# y   yellow
+# b   blue
+# m   magenta
+# c   cyan
+# w   white
+# d   default color
+# .   leave color unchanged

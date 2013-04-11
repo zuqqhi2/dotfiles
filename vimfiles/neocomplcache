@@ -1,42 +1,3 @@
-set number
-set ruler
-set encoding=utf8
-set paste
-set textwidth=0
-set softtabstop=3
-set tabstop=3
-set shiftwidth=3
-set autoindent
-set backspace=indent,eol,start
-set incsearch
-set ignorecase
-set wildmenu
-set commentstring=\ #\ %s
-set foldlevel=0
-set clipboard+=unnamed
-syntax on
-
-" Current Line Highlight
-set cursorline
-
-" Status Line
-set laststatus=2
-set statusline=%<
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=[%l/%L,%c]%V%8P
-
-" compatible with vi
-set nocompatible
-
-" Vundle Setting
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" Vundle
-Bundle 'gmarik/vundle'
-"----------------------------------------
-" Supplement
-"----------------------------------------
-Bundle 'Shougo/neocomplcache'
 " Disable AutoComplPop. Comment out this line if AutoComplPop is not installed.
 let g:acp_enableAtStartup = 0
 " Launches neocomplcache automatically on vim startup.
@@ -56,8 +17,7 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions',
-	 \ 'perl'   : $HOME.'/.vim/dict/perl.dict'
+    \ 'scheme' : $HOME.'/.gosh_completions'
     \ }
 
 " Define keyword, for minor languages
@@ -81,7 +41,7 @@ inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+"inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
@@ -112,22 +72,3 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-
-
-
-
-Bundle 'Shougo/unite.vim'
-" Programming Language Reference
-Bundle 'thinca/vim-ref'
-" Vimshell
-Bundle 'Shougo/vimshell'
-" Run program with inputing \r
-Bundle 'thinca/vim-quickrun'
-" coffee script syntax highlight
-Bundle 'kchmck/vim-coffee-script'
-" scala syntax highlight
-Bundle 'derekwyatt/vim-scala'
-Bundle 'Shougo/vimproc'
-Bundle 'eagletmt/coqtop-vim'
-filetype plugin indent on
-
