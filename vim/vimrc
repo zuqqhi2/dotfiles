@@ -1,6 +1,6 @@
 " plugin
-source $HOME/dotfiles/vimfiles/neobundle
-source $HOME/dotfiles/vimfiles/neocomplcache
+source $HOME/.dot/vim/neobundle
+source $HOME/.dot/vim/neocomplcache
 
 " vimrc
 set nocompatible
@@ -85,33 +85,3 @@ set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp-2,euc-jisx0213,euc-jp,
 if &encoding == 'utf-8'
     set ambiwidth=double
 endif
-
-
-
-" Current Line Highlight
-set cursorline
-
-" Vundle Setting
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" Vundle
-Bundle 'gmarik/vundle'
-"----------------------------------------
-" Supplement
-"----------------------------------------
-Bundle 'Shougo/unite.vim'
-" Programming Language Reference
-Bundle 'thinca/vim-ref'
-" Vimshell
-Bundle 'Shougo/vimshell'
-" Run program with inputing \r
-Bundle 'thinca/vim-quickrun'
-" coffee script syntax highlight
-Bundle 'kchmck/vim-coffee-script'
-" scala syntax highlight
-Bundle 'derekwyatt/vim-scala'
-Bundle 'Shougo/vimproc'
-Bundle 'eagletmt/coqtop-vim'
-filetype plugin indent on
-

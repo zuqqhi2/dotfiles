@@ -5,7 +5,7 @@ if [ -d "$TARGET" ]; then
   echo "Updating dotfiles repository ..."
   cd $TARGET && git pull origin master
 else
-  git clone https://github.com/kashimoo/dot.git $TARGET
+  git clone https://github.com/zuqqhi2/dotfiles.git $TARGET
 fi
 
 BUNDLE="$TARGET/vim/bundle"
