@@ -8,7 +8,7 @@ else
   git clone https://github.com/zuqqhi2/dotfiles.git $TARGET
 fi
 
-BUNDLE="$TARGET/vim/bundle"
+BUNDLE="$TARGET/vim/bundle/neobundle.vim"
 if [ ! -d "$BUNDLE" ]; then
   git clone https://github.com/Shougo/neobundle.vim.git $BUNDLE/neobundle.vim
 fi
