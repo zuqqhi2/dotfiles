@@ -9,8 +9,12 @@ else
 fi
 
 BUNDLE="$TARGET/vim/bundle"
-if [ ! -d "$BUNDLE" ]; then
+if [ ! -d "$BUNDLE/neobundle.vim" ]; then
   git clone https://github.com/Shougo/neobundle.vim.git $BUNDLE/neobundle.vim
+fi
+
+if [ ! -d "$BUNDLE/neocomplcache" ]; then
+  git clone https://github.com/Shougo/neocomplcache.git $BUNDLE/neocomplcache
 fi
 
 rm -rf $HOME/.vim
