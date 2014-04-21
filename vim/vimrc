@@ -41,40 +41,40 @@ set laststatus=2
 set cmdheight=1
 
 map Y y$
-nnoremap <C-L> :nohl<CR><C-L>
+"nnoremap <C-L> :nohl<CR><C-L>
 
 "-- highlight command mode
-highlight StatusLine guifg=black guibg=cyan gui=none ctermfg=black ctermbg=cyan cterm=none
+"highlight StatusLine guifg=black guibg=cyan gui=none ctermfg=black ctermbg=cyan cterm=none
 "-- highlight edit mode
-let g:hi_insert = 'highlight StatusLine guifg=black guibg=yellow gui=none ctermfg=black ctermbg=yellow cterm=none'
-if has('syntax')
-  augroup InsertHook
-  autocmd!
-  autocmd InsertEnter * call s:StatusLine('Enter')
-  autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
+"let g:hi_insert = 'highlight StatusLine guifg=black guibg=yellow gui=none ctermfg=black ctermbg=yellow cterm=none'
+"if has('syntax')
+"  augroup InsertHook
+"  autocmd!
+"  autocmd InsertEnter * call s:StatusLine('Enter')
+"  autocmd InsertLeave * call s:StatusLine('Leave')
+"  augroup END
+"endif
 
-let s:slhlcmd = ''
-function! s:StatusLine(mode)
-if a:mode == 'Enter'
-  silent! let s:slhlcmd = 'highlight '.s:GetHighlight('StatusLine')
-  silent exec g:hi_insert
-else
-  highlight clear StatusLine
-  silent exec s:slhlcmd
-  redraw
-endif
-endfunction
+"let s:slhlcmd = ''
+"function! s:StatusLine(mode)
+"if a:mode == 'Enter'
+"  silent! let s:slhlcmd = 'highlight '.s:GetHighlight('StatusLine')
+"  silent exec g:hi_insert
+"else
+"  highlight clear StatusLine
+"  silent exec s:slhlcmd
+"  redraw
+"endif
+"endfunction
 
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
-endfunction
+"function! s:GetHighlight(hi)
+"  redir => hl
+"  exec 'highlight '.a:hi
+"  redir END
+"  let hl = substitute(hl, '[\r\n]', '', 'g')
+"  let hl = substitute(hl, 'xxx', '', '')
+"  return hl
+"endfunction
 
 "-- utf-8
 let &termencoding=&encoding
